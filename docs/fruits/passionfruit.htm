@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Passionfruit</title>
+<script src="../angular.min.js"></script>
+</head>
+<body background="Passionfruit_back.jpg">
+<script>
+var app = angular.module('myApp', []);
+app.controller('costCtrl', function($scope) {
+    $scope.price =300;
+});
+</script>
+<figure>
+	<img src="passionfruit.jpg" height="200" width="300" onmouseover="this.width='700';this.height='500';"
+	onmouseout="this.width='200';this.height='200';"/>
+	<figcaption>Passionfruit</figcaption>
+</figure>
+<font color="blue" size="4">
+<p>Passiflora edulis is a vine species of passion flower that is native to southern Brazil through 
+Paraguay and northern Argentina.[1] Its common names include passion fruit or passionfruit (English), 
+maracujá (Portuguese) maracuyá or parcha (Spanish), grenadille or fruit de la passion (French) or lilikoʻi 
+(Hawaiian) and mburukuja (Guaraní).</p>
+<p>It is cultivated commercially in tropical and subtropical areas for its sweet, seedy fruit. 
+The passion fruit is a pepo, a type of berry, round to oval, either yellow or dark purple at maturity, 
+with a soft to firm, juicy interior filled with numerous seeds. The fruit is both eaten and juiced; 
+passion fruit juice is often added to other fruit juices to enhance aroma.
+</p></font>
+<div ng-app="myApp" ng-controller="costCtrl">
+<p><font color="black" size="8">Price = {{ price | currency : "Rs."}}</font></p>
+</html>

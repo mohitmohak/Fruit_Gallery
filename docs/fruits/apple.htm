@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Apple</title>
+<script src="../angular.min.js"></script>
+</head>
+<body background="apple_back.jpg">
+<script>
+var app = angular.module('myApp', []);
+app.controller('costCtrl', function($scope) {
+    $scope.price =65;
+});
+</script>
+<figure>
+	<img src="apple.jpg" height="200" width="300" border=2px solid black onmouseover="this.width='700';this.height='500';"
+	onmouseout="this.width='200';this.height='200';"/>
+	<figcaption>Apple</figcaption>
+</figure>
+<font color="blue" size="4">
+<p>An apple is a sweet, edible fruit produced by an apple tree (Malus pumila).
+Apple trees are cultivated worldwide, and are the most widely grown species in the genus Malus.
+The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today.
+Apples have been grown for thousands of years in Asia and Europe, and were brought to North America 
+by European colonists. Apples have religious and mythological significance in many cultures, 
+including Norse, Greek and European Christian traditions.</p>
+<p>There are more than 7,500 known cultivars of apples. Cultivars vary in their yield and the 
+ultimate size of the tree, even when grown on the same rootstock.Different cultivars are available 
+for temperate and subtropical climates.</p>
+</p></font>
+<div ng-app="myApp" ng-controller="costCtrl">
+<p><font color="black" size="8">Price = {{ price | currency : "Rs."}}</font></p>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Apricot</title>
+<script src="../angular.min.js"></script>
+</head>
+<body background="apricot_back.jpg">
+<script>
+var app = angular.module('myApp', []);
+app.controller('costCtrl', function($scope) {
+    $scope.price =280;
+});
+</script>
+<figure>
+	<img src="apricot.jpg" height="200" width="300" onmouseover="this.width='700';this.height='500';"
+	onmouseout="this.width='200';this.height='200';"/>
+	<figcaption>Apricot</figcaption>
+</figure>
+<font color="blue" size="4">
+<p>The apricot is a small tree, 8–12 m (26–39 ft) tall, with a trunk up to 40 cm (16 in) in diameter 
+and a dense, spreading canopy. The leaves are ovate, 5–9 cm (2.0–3.5 in) long and 4–8 cm (1.6–3.1 in) 
+wide, with a rounded base, a pointed tip and a finely serrated margin. The flowers are 2–4.5 cm (0.8–1.8 in) 
+in diameter, with five white to pinkish petals; they are produced singly or in pairs in early spring before 
+the leaves. The fruit is a drupe similar to a small peach, 1.5–2.5 cm (0.6–1.0 in) diameter (larger in some 
+modern cultivars), from yellow to orange, often tinged red on the side most exposed to the sun; its surface 
+can be smooth (botanically described as: glabrous) or velvety with very short hairs (botanically: pubescent). 
+The flesh is usually firm and not very juicy. Its taste can range from sweet to tart. The single seed is 
+enclosed in a hard, stony shell, often called a "stone" or "kernel", with a grainy, smooth texture except 
+for three ridges running down one side.
+</p></font>
+<div ng-app="myApp" ng-controller="costCtrl">
+<p><font color="black" size="8">Price = {{ price | currency : "Rs."}}</font></p>
+</html>

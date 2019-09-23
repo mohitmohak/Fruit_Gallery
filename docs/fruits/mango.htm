@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>Mango</title>
+<script src="../angular.min.js"></script>
+</head>
+<body background="mango_back.jpg">
+<script>
+var app = angular.module('myApp', []);
+app.controller('costCtrl', function($scope) {
+    $scope.price =100;
+});
+</script>
+<figure>
+	<img src="mango.jpg" height="200" width="300" onmouseover="this.width='700';this.height='500';"
+	onmouseout="this.width='200';this.height='200';"/>
+	<figcaption>Mango</figcaption>
+</figure>
+<font color="blue" size="4">
+<p>Mangoes are juicy stone fruit (drupe) from numerous species of tropical trees belonging to the 
+flowering plant genus Mangifera, cultivated mostly for their edible fruit.</p>
+<p>The majority of these species are found in nature as wild mangoes. The genus belongs to the 
+cashew family Anacardiaceae. Mangoes are native to South Asia,[1][2] from where the "common mango" or 
+"Indian mango", Mangifera indica, has been distributed worldwide to become one of the most widely 
+cultivated fruits in the tropics. Other Mangifera species (e.g. horse mango, Mangifera foetida) 
+are grown on a more localized basis.
+</p></font>
+<div ng-app="myApp" ng-controller="costCtrl">
+<p><font color="black" size="8">Price = {{ price | currency : "Rs."}}</font></p>
+</html>

@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Nectarine</title>
+<script src="../angular.min.js"></script>
+</head>
+<body background="nectarine_back.jpg">
+<script>
+var app = angular.module('myApp', []);
+app.controller('costCtrl', function($scope) {
+    $scope.price =250;
+});
+</script>
+<figure>
+	<img src="nectarine.jpg" height="200" width="300" onmouseover="this.width='700';this.height='500';"
+	onmouseout="this.width='200';this.height='200';"/>
+	<figcaption>Nectarine</figcaption>
+</figure>
+<font color="blue" size="4">
+<p>The peach (Prunus persica) is a deciduous tree native to the region of Northwest China 
+between the Tarim Basin and the north slopes of the Kunlun Mountains, where it was first 
+domesticated and cultivated. It bears an edible juicy fruit called a peach or a nectarine.
+</p></font>
+<div ng-app="myApp" ng-controller="costCtrl">
+<p><font color="black" size="8">Price = {{ price | currency : "Rs."}}</font></p>
+</html>

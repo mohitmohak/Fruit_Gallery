@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Grape</title>
+<script src="../angular.min.js"></script>
+</head>
+<body background="grape_back.jpg">
+<script>
+var app = angular.module('myApp', []);
+app.controller('costCtrl', function($scope) {
+    $scope.price =50;
+});
+</script>
+<figure>
+	<img src="grape.jpg" height="200" width="300" onmouseover="this.width='700';this.height='500';"
+	onmouseout="this.width='200';this.height='200';"/>
+	<figcaption>Grape</figcaption>
+</figure>
+<font color="blue" size="4">
+<p>Grapes can be eaten fresh as table grapes or they can be used for making wine, 
+jam, juice, jelly, grape seed extract, raisins, vinegar, and grape seed oil. 
+Grapes are a non-climacteric type of fruit, generally occurring in clusters.</p>
+<p>Grapes are a type of fruit that grow in clusters of 15 to 300, and can be crimson, 
+black, dark blue, yellow, green, orange, and pink. "White" grapes are actually green 
+in color, and are evolutionarily derived from the purple grape. Mutations in two 
+regulatory genes of white grapes turn off production of anthocyanins, which are 
+responsible for the color of purple grapes.
+</p></font>
+<div ng-app="myApp" ng-controller="costCtrl">
+<p><font color="black" size="8">Price = {{ price | currency : "Rs."}}</font></p>
+</html>

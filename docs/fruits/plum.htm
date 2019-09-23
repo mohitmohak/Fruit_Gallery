@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Plum</title>
+<script src="../angular.min.js"></script>
+</head>
+<body background="plum_back.jpg">
+<script>
+var app = angular.module('myApp', []);
+app.controller('costCtrl', function($scope) {
+    $scope.price =70;
+});
+</script>
+<figure>
+	<img src="plum.jpg" height="200" width="300" onmouseover="this.width='700';this.height='500';"
+	onmouseout="this.width='200';this.height='200';"/>
+	<figcaption>Plum</figcaption>
+</figure>
+<font color="blue" size="4">
+<p>A plum is a fruit of the subgenus Prunus of the genus Prunus. 
+The subgenus is distinguished from other subgenera (peaches, cherries, bird cherries, etc.) 
+in the shoots having terminal bud and solitary side buds (not clustered), the flowers in groups 
+of one to five together on short stems, and the fruit having a groove running down one side and 
+a smooth stone (or pit).</p>
+<p>Mature plum fruit may have a dusty-white waxy coating that gives them a glaucous appearance. 
+This is an epicuticular wax coating and is known as "wax bloom". Dried plum fruits are called "dried plums" 
+or prunes, although, in many countries, prunes are a distinct type of dried plum having a wrinkled appearance.
+</p></font>
+<div ng-app="myApp" ng-controller="costCtrl">
+<p><font color="black" size="8">Price = {{ price | currency : "Rs."}}</font></p>
+</html>

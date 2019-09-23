@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>Lime</title>
+<script src="../angular.min.js"></script>
+</head>
+<body background="lime_back.jpg">
+<script>
+var app = angular.module('myApp', []);
+app.controller('costCtrl', function($scope) {
+    $scope.price =15;
+});
+</script>
+<figure>
+	<img src="lime.jpg" height="200" width="300" onmouseover="this.width='700';this.height='500';"
+	onmouseout="this.width='200';this.height='200';"/>
+	<figcaption>Lime</figcaption>
+</figure>
+<font color="blue" size="4">
+<p>A lime (from French lime, from Arabic līma, from Persian līmū, "lemon") 
+is a hybrid citrus fruit, which is typically round, green in color, 3–6 centimetres (1.2–2.4 in) 
+in diameter, and contains acidic juice vesicles.</p>
+<p>There are several species of citrus trees whose fruits are called limes, including the Key lime 
+(Citrus aurantifolia), Persian lime, kaffir lime, and desert lime. Limes are a rich source of vitamin C, 
+sour and are often used to accent the flavours of foods and beverages. They are grown year-round. 
+Plants with fruit called "limes" have diverse genetic origins; limes do not form a monophyletic group.
+</p></font>
+<div ng-app="myApp" ng-controller="costCtrl">
+<p><font color="black" size="8">Price = {{ price | currency : "Rs."}}</font></p>
+</html>

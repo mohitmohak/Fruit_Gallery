@@ -1,0 +1,23 @@
+<html>
+<head>
+<script src="../angular.min.js"></script>
+</head>
+<script>
+	var app=angular.module('x',[]);
+	app.controller('sample',function($scope){$scope.degree=['Apple','Apricot','Avocado','Banana','Blueberry',
+	'Grape','Honeydew Melon','Kiwifruit','Lime','Mandarin','Mango','Nectarine','Orange','Passionfruit',
+	'Peach','Pear','Plum','Raspberry','Rockmelon','Strawberry','Tomato','Watermelon'];
+	});
+</script>
+<body>
+	<div ng-app="x" ng-controller="sample">
+		<input type="text" ng-model="s"/>
+		<ul>
+			<li ng-repeat="x in degree | filter : s">{{x}}</li>
+		</ul>
+	</div>
+<a href="select_fruit.htm">Select Fruit</a>
+<b>|</b>
+<a href="category.htm">Sort by Category</a>
+</body>
+</html>
